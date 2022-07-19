@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "184640552051",
+    "firebase_url": "https://library-delivery-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "library-delivery",
+    "storage_bucket": "library-delivery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184640552051:android:c717c760d200b3a321be06",
+        "android_client_info": {
+          "package_name": "com.mdp.librarydelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184640552051-hphrleuuebl05kj9rqt6e9lc6d9levmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtjMgC0P78r4SCXJV9yPSNtbHpAw04ilg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184640552051-hphrleuuebl05kj9rqt6e9lc6d9levmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
