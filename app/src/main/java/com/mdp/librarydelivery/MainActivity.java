@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -13,10 +14,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.content.Intent;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Sample code on inserting data to Firestore
+    @SuppressWarnings("unused")
     public void addUser() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         // Create a new user with a first and last name
@@ -48,5 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 Log.w(TAG, "Error adding document", e);
             }
         });
+    }
+
+    // button function to open admin side(later to be added in the login page
+    public void openAdmin(View view) {
+        Intent intent = new Intent(this, Manage_books.class);
+        startActivity(intent);
     }
 }
