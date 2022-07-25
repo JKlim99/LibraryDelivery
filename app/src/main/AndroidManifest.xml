@@ -14,6 +14,21 @@
         android:theme="@style/Theme.LibraryDelivery"
         tools:targetApi="31">
         <activity
+            android:name=".manage_book_loans_rule"
+            android:exported="false" />
+        <activity
+            android:name=".manage_book_loans"
+            android:exported="false" />
+        <activity
+            android:name=".View_delivery"
+            android:exported="false" />
+        <activity
+            android:name=".view_users"
+            android:exported="false" />
+        <activity
+            android:name=".Manage_books"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
