@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,8 +27,21 @@ public class Manage_books extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_books);
+        EditText nameEditText = (EditText) findViewById(R.id.name);
+        String fullName = nameEditText.getText().toString();
+    }
+
+    public void submitbuttonHandler(View view) {
+        //Decide what happens when the user clicks the submit button
 
     }
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_manage_books);
+//
+//    }
 
 
     @SuppressWarnings("unused")
