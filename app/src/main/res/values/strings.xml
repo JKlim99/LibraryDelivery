@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">LibraryDelivery</string>
-    <string name="title" > add book form </string>
-    <string name="name">hint</string>
-    <string name="goal_weight">aouther name</string>
+    <string name="title_activity_user_home">UserHome</string>
+    <string name="nav_header_title">Welcome,</string>
+    <string name="nav_header_subtitle">username</string>
+    <string name="logout">Logout</string>
+    <string name="book_list">Book List</string>
+    <string name="loaned_books">Loaned Books</string>
+    <string name="delivery">Delivery</string>
+
 </resources>
