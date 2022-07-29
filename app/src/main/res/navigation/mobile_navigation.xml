@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_booklist">
+
+    <fragment
+        android:id="@+id/nav_booklist"
+        android:name="com.mdp.librarydelivery.ui.booklist.BookListFragment"
+        android:label="Book List"
+        tools:layout="@layout/fragment_booklist" />
+
+    <fragment
+        android:id="@+id/nav_loanedbooks"
+        android:name="com.mdp.librarydelivery.ui.loanedbooks.LoanedBooksFragment"
+        android:label="Loaned Books"
+        tools:layout="@layout/fragment_loanedbooks" />
+
+    <fragment
+        android:id="@+id/nav_delivery"
+        android:name="com.mdp.librarydelivery.ui.delivery.DeliveryFragment"
+        android:label="Delivery"
+        tools:layout="@layout/fragment_delivery" />
+</navigation>
