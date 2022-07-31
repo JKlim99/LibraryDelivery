@@ -57,21 +57,6 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/loanedDateLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/textPadding"
-                android:text="Author"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/loanedDateText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/textPadding"
-                android:text="TextView" />
-
-            <TextView
                 android:id="@+id/categoryLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,11 +72,26 @@
                 android:text="TextView" />
 
             <TextView
+                android:id="@+id/loanedDateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="Loaned Date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loanedDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/returnDateLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/textPadding"
-                android:text="Description"
+                android:text="Return Date"
                 android:textStyle="bold" />
 
             <TextView
@@ -106,7 +106,7 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Loan Book" />
+                android:text="Return Book" />
 
         </LinearLayout>
     </ScrollView>

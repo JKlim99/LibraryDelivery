@@ -26,20 +26,20 @@ public class BookModel {
         return id;
     }
 
-    public String getBook_name() {
-        return book_name;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
     public void setId(String id) {
         this.id = id;
     }
 
+    public String getBook_name() {
+        return book_name;
+    }
+
     public void setBookName(String book_name) {
         this.book_name = book_name;
+    }
+
+    public String getImage() {
+        return image;
     }
 
     public void setImage(String image) {

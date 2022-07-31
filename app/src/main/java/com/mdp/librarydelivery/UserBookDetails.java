@@ -39,11 +39,11 @@ public class UserBookDetails extends AppCompatActivity {
                         bookNameView.setText(bookModel.getBook_name());
                         TextView isbnView = findViewById(R.id.isbnText);
                         isbnView.setText(bookModel.getIsbn());
-                        TextView authorView = findViewById(R.id.authorText);
+                        TextView authorView = findViewById(R.id.loanedDateText);
                         authorView.setText(bookModel.getAuthor());
                         TextView categoryView = findViewById(R.id.categoryText);
                         categoryView.setText(bookModel.getCategory());
-                        TextView descriptionView = findViewById(R.id.descriptionText);
+                        TextView descriptionView = findViewById(R.id.returnDateText);
                         descriptionView.setText(bookModel.getDescription());
 
                         ImageView bookImageView = findViewById(R.id.imageView);
