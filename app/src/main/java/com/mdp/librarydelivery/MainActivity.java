@@ -26,7 +26,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //checkin();
+        checkinAdmin();
     }
+    public void checkin() {
+        Intent intent = new Intent(this, UserBookDetails.class);
+        startActivity(intent);}
+
+    public void checkinAdmin() {
+        Intent intent = new Intent(this, view_users.class);
+        startActivity(intent);}
+
 
     // Sample code on inserting data to Firestore
     @SuppressWarnings("unused")
@@ -55,9 +65,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // button function to open admin side(later to be added in the login page
-    public void openAdmin(View view) {
-        Intent intent = new Intent(this, Manage_books.class);
-        startActivity(intent);
-    }
+
+
 }

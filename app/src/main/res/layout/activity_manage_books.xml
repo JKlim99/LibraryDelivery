@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="addBook"
+    android:onClick="submitbuttonHandler"
     tools:context=".Manage_books">
 
     <TextView
@@ -64,7 +64,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="230dp"
         android:ems="10"
-        android:hint="publish date"
+        android:hint="publish_date"
         android:inputType="datetime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.863"
@@ -113,17 +113,18 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="684dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#D500F9"
         android:onClick="submitbuttonHandler"
         android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="OnClick" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

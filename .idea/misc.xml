@@ -3,26 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1825" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_main.xml" value="0.286231884057971" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_manage_book_loans_rule.xml" value="0.19427083333333334" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_manage_books.xml" value="0.19427083333333334" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_book_details.xml" value="0.46368715083798884" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_booklist.xml" value="0.19427083333333334" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_home.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/app_bar_user_book_details.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/app_bar_user_home.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/booklist_items.xml" value="0.190625" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/content_user_book_details.xml" value="0.14" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/content_user_home.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_booklist.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_gallery.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_home.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_loanedbooks.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/nav_header_user_book_details.xml" value="0.1490036231884058" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/nav_header_user_home.xml" value="0.18085106382978725" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/menu/activity_user_book_details_drawer.xml" value="0.19166666666666668" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/menu/user_home.xml" value="0.19166666666666668" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_main.xml" value="0.22327898550724637" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_manage_book_loans.xml" value="0.11413043478260869" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_manage_book_loans_rule.xml" value="0.25" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_manage_books.xml" value="0.25" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_user_book_details.xml" value="0.1" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_user_details.xml" value="0.1" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_user_home.xml" value="0.25" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_user_model.xml" value="0.2359375" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_view_delivery.xml" value="0.25" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/activity_view_users.xml" value="0.264" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/app_bar_user_home.xml" value="0.25" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/booklist_items.xml" value="0.2" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/content_user_home.xml" value="0.234375" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/fragment_booklist.xml" value="0.234375" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/fragment_delivery.xml" value="0.234375" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/fragment_loanedbooks.xml" value="0.234375" />
+        <entry key="..\:/LibraryDelivery/app/src/main/res/layout/nav_header_user_home.xml" value="0.4" />
       </map>
     </option>
   </component>

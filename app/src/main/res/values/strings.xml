@@ -7,5 +7,6 @@
     <string name="book_list">Book List</string>
     <string name="loaned_books">Loaned Books</string>
     <string name="delivery">Delivery</string>
+    <string name="title" />
 
 </resources>

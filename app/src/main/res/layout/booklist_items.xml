@@ -10,7 +10,7 @@
         android:textAlignment="viewEnd"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="-1dp">
 
         <ImageView
             android:id="@+id/imageView"
