@@ -14,6 +14,21 @@
         android:theme="@style/Theme.LibraryDelivery"
         tools:targetApi="31">
         <activity
+            android:name=".AdminBookList"
+            android:exported="false" />
+        <activity
+            android:name=".BookLoanDetails"
+            android:exported="false" />
+        <activity
+            android:name=".BookLoansList"
+            android:exported="false" />
+        <activity
+            android:name=".BookLoanModel"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryDetails"
+            android:exported="false" />
+        <activity
             android:name=".deliveryModel"
             android:exported="false" />
         <activity

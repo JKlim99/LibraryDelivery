@@ -15,42 +15,43 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
-public class UserBookDetails extends AppCompatActivity {
+
+public class BookLoanDetails extends AppCompatActivity {
 
     private static final String TAG = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         Bundle param = getIntent().getExtras();
         String id = "";
         if(param != null) {
             id = param.getString("id");
         }
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("books").document(id);
+        DocumentReference docRef = db.collection("delivery").document(id);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+
             @Override
 
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        BookModel bookModel = document.toObject(BookModel.class);
-                        bookModel.setId(document.getId());
-                        TextView bookNameView = findViewById(R.id.bookNameText);
-                        bookNameView.setText(bookModel.getBook_name());
-                        TextView isbnView = findViewById(R.id.isbnText);
-                        isbnView.setText(bookModel.getIsbn());
-                        TextView authorView = findViewById(R.id.authorText);
-                        authorView.setText(bookModel.getAuthor());
-                        TextView categoryView = findViewById(R.id.categoryText);
-                        categoryView.setText(bookModel.getCategory());
-                        TextView descriptionView = findViewById(R.id.descriptionText);
-                        descriptionView.setText(bookModel.getDescription());
+                        BookLoanModel bookLoanModel = document.toObject(BookLoanModel.class);
+                        bookLoanModel.setLoan_id(document.getId());
+                        TextView bookNameView = findViewById(R.id.loan_idText);
+                        bookNameView.setText(bookLoanModel.getLoan_id());
+                        TextView isbnView = findViewById(R.id.book_idText);
+                        isbnView.setText(bookLoanModel.getBook_id());
+                        TextView authorView = findViewById(R.id.request_dateText);
+                        authorView.setText(bookLoanModel.getRequest_date());
+                        TextView categoryView = findViewById(R.id.return_dateText);
+                        categoryView.setText(bookLoanModel.getReturn_date());
+                        TextView descriptionView = findViewById(R.id.statusText);
+                        descriptionView.setText(bookLoanModel.getStatus());
 
-                        ImageView bookImageView = findViewById(R.id.imageView);
 
-                        Picasso.get().load(bookModel.getImage()).into(bookImageView);
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                     } else {
                         Log.d(TAG, "No such document");
@@ -60,69 +61,8 @@ public class UserBookDetails extends AppCompatActivity {
                 }
             }
         });
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_book_details);
+        setContentView(R.layout.activity_book_loan_details);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

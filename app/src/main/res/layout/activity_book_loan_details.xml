@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookLoanDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/loan_idLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="loan_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loan_idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/book_idLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="book_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/book_idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/request_dateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="request_date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/request_dateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/return_dateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="return_date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/return_dateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="status"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/user_idLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="user_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

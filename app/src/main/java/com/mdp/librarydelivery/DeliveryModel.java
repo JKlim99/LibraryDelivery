@@ -1,20 +1,20 @@
 package com.mdp.librarydelivery;
 
-public class deliveryModel{
+public class DeliveryModel{
     private String id;
     private String deliverer_name;
     private String delivery_address;
     private String delivery_date;
     private String email;
-    private String loan_id[];
+    private int loan_id;
     private String phone_no;
     private String receiver_id;
     private String receiver_name;
     private String status;
 
-    public deliveryModel(){}
+    public DeliveryModel(){}
 
-    public deliveryModel(String deliverer_name, String delivery_address, String delivery_date, String email, String loan_id[],String phone_no, String receiver_id, String receiver_name, String status){
+    public DeliveryModel(String deliverer_name, String delivery_address, String delivery_date, String email, int loan_id,String phone_no, String receiver_id, String receiver_name, String status){
         this.deliverer_name =deliverer_name;
         this.delivery_address =delivery_address;
         this.delivery_date = delivery_date;
@@ -51,9 +51,9 @@ public class deliveryModel{
 
     public void setEmail(String email){this.email = email;}
 
-    public String[] getLoan_id(){return this.loan_id;}
+    public int getLoan_id(){return this.loan_id;}
 
-    public void setLoan_id(String[] loan_id){this.loan_id = loan_id;}
+    public void setLoan_id(int loan_id){this.loan_id = loan_id;}
 
     public String getReceiver_id(){return this.receiver_id;}
 

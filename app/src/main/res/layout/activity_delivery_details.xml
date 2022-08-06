@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliveryDetails">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/deliverer_nameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="deliverer_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/deliverer_nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/delivery_addressLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="delivery_address"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/delivery_addressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/delivery_dateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="delivery_date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/delivery_dateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="email"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/loan_idLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="loan_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loan_idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:justificationMode="inter_word"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/receiver_idLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="receiver_id"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/receiver_idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:justificationMode="inter_word"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/receiver_nameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="receiver_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/receiver_nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:justificationMode="inter_word"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="status"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:justificationMode="inter_word"
+                android:text="TextView" />
+
+            <!--Your comment-->
+
+            <TextView
+                android:id="@+id/phone_noLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="phone_no"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone_noText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:justificationMode="inter_word"
+                android:text="TextView" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
