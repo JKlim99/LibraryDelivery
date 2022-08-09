@@ -18,6 +18,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 public class AdminBookList extends ArrayAdapter<BookModel> {
 
+
     // constructor for our list view adapter.
     public AdminBookList(@NonNull Context context, ArrayList<BookModel> BookModelArrayList) {
         super(context, 0, BookModelArrayList);
