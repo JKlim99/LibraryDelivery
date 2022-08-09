@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -69,31 +71,59 @@ public class AdminBookDetails extends AppCompatActivity {
                     Log.d(TAG, "get failed with ", task.getException());
                 }
             }
+
+
+        });
+        Button deleteBookBtn = findViewById(R.id.button1);
+
+        deleteBookBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                db.collection("books").document("id")
+                        .delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully deleted!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error deleting document", e);
+                            }
+                        });
+            }
         });
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_book_details);
 
-        Button updateBookBtn = findViewById(R.id.button1);
 
-        updateBookBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+// suppose to help in update TT
+//        Button updateBookBtn = findViewById(R.id.button1);
+//
+//        updateBookBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                // after clicking of the item of recycler view.
+//                // we are passing our course object to the new activity.
+//                BookModel bookModel = BookModelArrayList.get(getAdapterPosition());
+//
+//                // below line is creating a new intent.
+//                Intent i = new Intent(context, EditBook.class);
+//
+//                // below line is for putting our course object to our next activity.
+//                i.putExtra("book", bookModel);
+//
+//                // after passing the data we are starting our activity.
+//                context.startActivity(i);
+//            }
+//        });
 
-                // after clicking of the item of recycler view.
-                // we are passing our course object to the new activity.
-                BookModel bookModel = BookModelArrayList.get(getAdapterPosition());
 
-                // below line is creating a new intent.
-                Intent i = new Intent(context, EditBook.class);
-
-                // below line is for putting our course object to our next activity.
-                i.putExtra("book", bookModel);
-
-                // after passing the data we are starting our activity.
-                context.startActivity(i);
-            }
-        });
 
     }}
 
