@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserBookDetails">
-
+    tools:context=".AdminBookLoanDetails">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,6 +24,21 @@
                 android:background="@color/white"
                 android:backgroundTint="@color/white"
                 android:padding="3dp" />
+
+            <TextView
+                android:id="@+id/idLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="ID"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bookIdText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/isbnLabel"
@@ -57,21 +71,6 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/loanedDateLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/textPadding"
-                android:text="Author"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/loanedDateText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/textPadding"
-                android:text="TextView" />
-
-            <TextView
                 android:id="@+id/categoryLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,11 +86,41 @@
                 android:text="TextView" />
 
             <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="Status"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/loanedDateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="Loaned Date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loanedDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/returnDateLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/textPadding"
-                android:text="Description"
+                android:text="Return Date"
                 android:textStyle="bold" />
 
             <TextView
@@ -103,18 +132,34 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/idText"
+                android:id="@+id/fineLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:text="Fine Amount"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fineText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/textPadding"
+                android:ems="10"
+                android:justificationMode="inter_word"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/idLoanText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:visibility="gone" />
-
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Loan Book"
-                android:onClick="loanBook"/>
+                android:text="Update Fine"
+                android:onClick="updateFine"/>
 
         </LinearLayout>
     </ScrollView>

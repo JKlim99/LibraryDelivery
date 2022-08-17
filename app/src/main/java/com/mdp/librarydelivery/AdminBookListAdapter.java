@@ -17,10 +17,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class BookListAdapter extends ArrayAdapter<BookModel> {
+public class AdminBookListAdapter extends ArrayAdapter<BookModel> {
 
     // constructor for our list view adapter.
-    public BookListAdapter(@NonNull Context context, ArrayList<BookModel> BookModelArrayList) {
+    public AdminBookListAdapter(@NonNull Context context, ArrayList<BookModel> BookModelArrayList) {
         super(context, 0, BookModelArrayList);
     }
 
@@ -44,7 +44,7 @@ public class BookListAdapter extends ArrayAdapter<BookModel> {
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Loading completed", Toast.LENGTH_SHORT).show();
                 Context context = v.getContext();
-                Intent i = new Intent(context, UserBookDetails.class);
+                Intent i = new Intent(context, AdminBookDetails.class);
                 i.putExtra("id", bookModel.getId());
                 context.startActivity(i);
             }

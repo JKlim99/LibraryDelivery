@@ -17,11 +17,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class BookListAdapter extends ArrayAdapter<BookModel> {
+public class AdminUserListAdapter extends ArrayAdapter<UserModel> {
 
     // constructor for our list view adapter.
-    public BookListAdapter(@NonNull Context context, ArrayList<BookModel> BookModelArrayList) {
-        super(context, 0, BookModelArrayList);
+    public AdminUserListAdapter(@NonNull Context context, ArrayList<UserModel> UserModelArrayList) {
+        super(context, 0, UserModelArrayList);
     }
 
     @NonNull
@@ -29,23 +29,20 @@ public class BookListAdapter extends ArrayAdapter<BookModel> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listitemView = convertView;
         if (listitemView == null) {
-            listitemView = LayoutInflater.from(getContext()).inflate(R.layout.booklist_items, parent, false);
+            listitemView = LayoutInflater.from(getContext()).inflate(R.layout.userlist_items, parent, false);
         }
 
-        BookModel bookModel = getItem(position);
-        TextView bookNameView = listitemView.findViewById(R.id.textView);
-        ImageView bookImageView = listitemView.findViewById(R.id.imageView);
-        bookNameView.setText(bookModel.getBook_name());
-
-        Picasso.get().load(bookModel.getImage()).into(bookImageView);
+        UserModel userModel = getItem(position);
+        TextView nameView = listitemView.findViewById(R.id.textView);
+        nameView.setText(userModel.getUsername()+" ("+userModel.getUser_type()+")");
 
         listitemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Loading completed", Toast.LENGTH_SHORT).show();
                 Context context = v.getContext();
-                Intent i = new Intent(context, UserBookDetails.class);
-                i.putExtra("id", bookModel.getId());
+                Intent i = new Intent(context, AdminUserDetails.class);
+                i.putExtra("id", userModel.getId());
                 context.startActivity(i);
             }
         });

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.delivery.DeliveryFragment">
-
+    tools:context=".AdminLoanList">
     <ListView
-        android:id="@+id/DeliveryListView"
+        android:id="@+id/BookLoanListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
