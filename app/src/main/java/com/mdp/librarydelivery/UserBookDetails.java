@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -140,6 +141,7 @@ public class UserBookDetails extends AppCompatActivity {
                                                 });
                                     }
                                 });
+                        Toast.makeText(getApplicationContext(), "Book loaned", Toast.LENGTH_SHORT).show();
                         finish();
                         startActivity(getIntent());
                     }

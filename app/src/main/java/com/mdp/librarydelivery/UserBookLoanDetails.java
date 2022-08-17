@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -148,7 +149,7 @@ public class UserBookLoanDetails extends AppCompatActivity {
                                                 .add(docData3);
                                     }
                                 });
-
+                        Toast.makeText(getApplicationContext(), "Book returned", Toast.LENGTH_SHORT).show();
                         finish();
                         startActivity(getIntent());
                     }
