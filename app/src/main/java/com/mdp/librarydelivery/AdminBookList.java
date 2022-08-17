@@ -1,42 +1,36 @@
-package com.mdp.librarydelivery.ui.booklist;
-
-import android.content.Context;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
+package com.mdp.librarydelivery;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ListView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.mdp.librarydelivery.BookListAdapter;
-import com.mdp.librarydelivery.BookModel;
-import com.mdp.librarydelivery.R;
 import com.mdp.librarydelivery.databinding.FragmentBooklistBinding;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class BookListFragment extends Fragment {
+public class AdminBookList extends AppCompatActivity {
     private static final String TAG = "";
     ArrayList<BookModel> BookModelArrayList;
     ListView bookListView;
 
     private FragmentBooklistBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-
-        binding = FragmentBooklistBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("books")
                 .whereIn("status", Arrays.asList("available", "loaned"))
@@ -46,7 +40,7 @@ public class BookListFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             BookModelArrayList = new ArrayList<>();
-                            bookListView = root.findViewById(R.id.BookListView);
+                            bookListView = findViewById(R.id.BookListView);
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 BookModel bookModel = document.toObject(BookModel.class);
@@ -56,8 +50,7 @@ public class BookListFragment extends Fragment {
 
                             }
                             // after that we are passing our array list to our adapter class.
-                            Context context = root.getContext();
-                            BookListAdapter adapter = new BookListAdapter(context, BookModelArrayList);
+                            AdminBookListAdapter adapter = new AdminBookListAdapter(AdminBookList.this, BookModelArrayList);
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.
@@ -67,13 +60,15 @@ public class BookListFragment extends Fragment {
                         }
                     }
                 });
-
-        return root;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_admin_book_list);
+        FloatingActionButton fab = findViewById(R.id.add_fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent page = new Intent(AdminBookList.this, AdminBookCreate.class);
+                startActivity(page);
+            }
+        });
     }
 }

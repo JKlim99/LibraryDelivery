@@ -1,5 +1,7 @@
 package com.mdp.librarydelivery;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -121,24 +123,58 @@ public class DelivererDeliveryDetails extends AppCompatActivity {
     }
 
     public void markDelivering(View view){
-        TextView idView = findViewById(R.id.idText);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Map<String, Object> docData = new HashMap<>();
-        docData.put("status", "Delivering");
-        db.collection("delivery").document(idView.getText().toString())
-                .update(docData);
-        finish();
-        startActivity(getIntent());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Change Status Confirmation");
+        builder.setMessage("Are you sure you want to mark this delivery as 'Delivering' status?");
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        TextView idView = findViewById(R.id.idText);
+                        FirebaseFirestore db = FirebaseFirestore.getInstance();
+                        Map<String, Object> docData = new HashMap<>();
+                        docData.put("status", "Delivering");
+                        db.collection("delivery").document(idView.getText().toString())
+                                .update(docData);
+                        finish();
+                        startActivity(getIntent());
+                    }
+                });
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     public void markDelivered(View view){
-        TextView idView = findViewById(R.id.idText);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Map<String, Object> docData = new HashMap<>();
-        docData.put("status", "Delivered");
-        db.collection("delivery").document(idView.getText().toString())
-                .update(docData);
-        finish();
-        startActivity(getIntent());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Change Status Confirmation");
+        builder.setMessage("Are you sure you want to mark this delivery as 'Delivered' status?");
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        TextView idView = findViewById(R.id.idText);
+                        FirebaseFirestore db = FirebaseFirestore.getInstance();
+                        Map<String, Object> docData = new HashMap<>();
+                        docData.put("status", "Delivered");
+                        db.collection("delivery").document(idView.getText().toString())
+                                .update(docData);
+                        finish();
+                        startActivity(getIntent());
+                    }
+                });
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

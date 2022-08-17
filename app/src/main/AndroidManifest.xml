@@ -14,13 +14,47 @@
         android:theme="@style/Theme.LibraryDelivery"
         tools:targetApi="31">
         <activity
+            android:name=".AdminUserDetails"
+            android:exported="false"
+            android:label="User Details"
+            android:parentActivityName=".AdminUserList"/>
+        <activity
+            android:name=".AdminUserCreate"
+            android:exported="false"
+            android:label="Create User"
+            android:parentActivityName=".AdminUserList"/>
+        <activity
+            android:name=".AdminUserList"
+            android:exported="false"
+            android:label="User List"
+            android:parentActivityName=".AdminHome"/>
+        <activity
+            android:name=".AdminBookCreate"
+            android:exported="false"
+            android:label="Create Book"
+            android:parentActivityName=".AdminBookList" />
+        <activity
+            android:name=".AdminBookDetails"
+            android:exported="false"
+            android:label="Book details"
+            android:parentActivityName=".AdminBookList" />
+        <activity
+            android:name=".AdminBookList"
+            android:exported="false"
+            android:label="Book List"
+            android:parentActivityName=".AdminHome" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
             android:name=".DelivererDeliveryDetails"
             android:exported="false"
             android:label="Delivery details"
             android:parentActivityName=".DelivererHome" />
         <activity
             android:name=".DelivererHome"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Delivery List" />
         <activity
             android:name=".Profile"
             android:exported="false"

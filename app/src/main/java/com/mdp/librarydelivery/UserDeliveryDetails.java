@@ -1,5 +1,7 @@
 package com.mdp.librarydelivery;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -119,13 +121,30 @@ public class UserDeliveryDetails extends AppCompatActivity {
     }
 
     public void verifyDelivery(View view){
-        TextView idView = findViewById(R.id.idText);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Map<String, Object> docData = new HashMap<>();
-        docData.put("status", "Verified");
-        db.collection("delivery").document(idView.getText().toString())
-                .update(docData);
-        finish();
-        startActivity(getIntent());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Verify Delivery Confirmation");
+        builder.setMessage("Are you sure you want to verify the delivery?");
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        TextView idView = findViewById(R.id.idText);
+                        FirebaseFirestore db = FirebaseFirestore.getInstance();
+                        Map<String, Object> docData = new HashMap<>();
+                        docData.put("status", "Verified");
+                        db.collection("delivery").document(idView.getText().toString())
+                                .update(docData);
+                        finish();
+                        startActivity(getIntent());
+                    }
+                });
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

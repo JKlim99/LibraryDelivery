@@ -3,7 +3,9 @@ package com.mdp.librarydelivery;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,8 +70,25 @@ public class DelivererHome extends AppCompatActivity {
     }
 
     public void logout(MenuItem item) {
-        Toast.makeText(this, "Logout successfully", Toast.LENGTH_SHORT).show();
-        Intent login = new Intent(DelivererHome.this, Login.class);
-        startActivity(login);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Logout Confirmation");
+        builder.setMessage("Are you sure you want to logout?");
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(DelivererHome.this, "Logout successfully", Toast.LENGTH_SHORT).show();
+                        Intent login = new Intent(DelivererHome.this, Login.class);
+                        startActivity(login);
+                    }
+                });
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

@@ -55,6 +55,7 @@ public class Login extends AppCompatActivity {
         .whereEqualTo("username", usernameText.getText().toString())
         .whereEqualTo("password", passwordText.getText().toString())
         .whereEqualTo("user_type", usertype)
+        .whereEqualTo("status", "active")
         .get()
         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -85,7 +86,8 @@ public class Login extends AppCompatActivity {
                             startActivity(home);
                         }
                         else{
-
+                            Intent home = new Intent(Login.this, AdminHome.class);
+                            startActivity(home);
                         }
                     }
                     if(found == 0) {
