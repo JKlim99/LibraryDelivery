@@ -1,5 +1,8 @@
 package com.mdp.librarydelivery;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -7,11 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -20,11 +19,10 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserDeliveryDetails extends AppCompatActivity {
+public class AdminDeliveryDetails extends AppCompatActivity {
     private static final String TAG = "";
 
     @Override
@@ -58,7 +56,7 @@ public class UserDeliveryDetails extends AppCompatActivity {
                         delivererNameView.setText(deliveryModel.getDeliverer_name());
                         TextView statusView = findViewById(R.id.statusText);
                         statusView.setText(deliveryModel.getStatus());
-                        if(deliveryModel.getStatus().equals("Delivered") && deliveryModel.getType().equals("Loan")){
+                        if(deliveryModel.getStatus().equals("Delivered") && deliveryModel.getType().equals("Return")){
                             Button button = findViewById(R.id.button);
                             button.setVisibility(View.VISIBLE);
                         }
@@ -117,7 +115,7 @@ public class UserDeliveryDetails extends AppCompatActivity {
             }
         });
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_delivery_details);
+        setContentView(R.layout.activity_admin_delivery_details);
     }
 
     public void verifyDelivery(View view){
@@ -126,18 +124,18 @@ public class UserDeliveryDetails extends AppCompatActivity {
         builder.setTitle("Verify Delivery Confirmation");
         builder.setMessage("Are you sure you want to verify the delivery?");
         builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        TextView idView = findViewById(R.id.idText);
-                        FirebaseFirestore db = FirebaseFirestore.getInstance();
-                        Map<String, Object> docData = new HashMap<>();
-                        docData.put("status", "Verified");
-                        db.collection("delivery").document(idView.getText().toString())
-                                .update(docData);
-                        finish();
-                        startActivity(getIntent());
-                    }
-                });
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                TextView idView = findViewById(R.id.idText);
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                Map<String, Object> docData = new HashMap<>();
+                docData.put("status", "Verified");
+                db.collection("delivery").document(idView.getText().toString())
+                        .update(docData);
+                finish();
+                startActivity(getIntent());
+            }
+        });
         builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

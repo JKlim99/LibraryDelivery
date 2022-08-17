@@ -99,7 +99,7 @@ public class UserBookDetails extends AppCompatActivity {
                         Map<String, Object> docData2 = new HashMap<>();
                         docData2.put("book_id", idView.getText().toString());
                         docData2.put("status", "loaned");
-                        docData2.put("fine_amount", "0.00");
+                        docData2.put("fine_amount", "RM0.00");
                         docData2.put("user_id", session.getid());
 
                         Calendar calender = Calendar.getInstance();

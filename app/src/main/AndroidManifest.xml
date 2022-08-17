@@ -14,20 +14,40 @@
         android:theme="@style/Theme.LibraryDelivery"
         tools:targetApi="31">
         <activity
+            android:name=".AdminDeliveryDetails"
+            android:exported="false"
+            android:label="Delivery Details"
+            android:parentActivityName=".AdminDeliveryList"/>
+        <activity
+            android:name=".AdminDeliveryList"
+            android:exported="false"
+            android:label="Delivery List"
+            android:parentActivityName=".AdminHome" />
+        <activity
+            android:name=".AdminBookLoanDetails"
+            android:exported="false"
+            android:label="Book Loan Details"
+            android:parentActivityName=".AdminLoanList" />
+        <activity
+            android:name=".AdminLoanList"
+            android:exported="false"
+            android:label="Book Loan List"
+            android:parentActivityName=".AdminHome" />
+        <activity
             android:name=".AdminUserDetails"
             android:exported="false"
             android:label="User Details"
-            android:parentActivityName=".AdminUserList"/>
+            android:parentActivityName=".AdminUserList" />
         <activity
             android:name=".AdminUserCreate"
             android:exported="false"
             android:label="Create User"
-            android:parentActivityName=".AdminUserList"/>
+            android:parentActivityName=".AdminUserList" />
         <activity
             android:name=".AdminUserList"
             android:exported="false"
             android:label="User List"
-            android:parentActivityName=".AdminHome"/>
+            android:parentActivityName=".AdminHome" />
         <activity
             android:name=".AdminBookCreate"
             android:exported="false"
@@ -36,7 +56,7 @@
         <activity
             android:name=".AdminBookDetails"
             android:exported="false"
-            android:label="Book details"
+            android:label="Book Details"
             android:parentActivityName=".AdminBookList" />
         <activity
             android:name=".AdminBookList"
@@ -49,7 +69,7 @@
         <activity
             android:name=".DelivererDeliveryDetails"
             android:exported="false"
-            android:label="Delivery details"
+            android:label="Delivery Details"
             android:parentActivityName=".DelivererHome" />
         <activity
             android:name=".DelivererHome"
@@ -71,17 +91,17 @@
         <activity
             android:name=".UserDeliveryDetails"
             android:exported="false"
-            android:label="Delivery details"
+            android:label="Delivery Details"
             android:parentActivityName=".UserHome" />
         <activity
             android:name=".UserBookLoanDetails"
             android:exported="false"
-            android:label="Book loan details"
+            android:label="Book Loan Details"
             android:parentActivityName=".UserHome" />
         <activity
             android:name=".UserBookDetails"
             android:exported="false"
-            android:label="Book details"
+            android:label="Book Details"
             android:parentActivityName=".UserHome" />
         <activity
             android:name=".UserHome"

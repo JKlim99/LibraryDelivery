@@ -60,12 +60,12 @@ public class AdminHome extends AppCompatActivity {
     }
 
     public void loans(View view){
-        Intent page = new Intent(AdminHome.this, Login.class);
+        Intent page = new Intent(AdminHome.this, AdminLoanList.class);
         startActivity(page);
     }
 
     public void delivery(View view){
-        Intent page = new Intent(AdminHome.this, Login.class);
+        Intent page = new Intent(AdminHome.this, AdminDeliveryList.class);
         startActivity(page);
     }
 }
