@@ -41,48 +41,29 @@ public class BookLoanAdapter extends ArrayAdapter<BookLoanModel> {
         }
 
         BookLoanModel bookLoanModel = getItem(position);
-        Log.d(TAG, "test: " + bookLoanModel.getBook_id());
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("books").document(bookLoanModel.getBook_id());
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        BookModel bookModel = document.toObject(BookModel.class);
-                        bookModel.setId(document.getId());
-                        TextView bookNameView = listitemView.findViewById(R.id.textView);
-                        TextView loanedDateView = listitemView.findViewById(R.id.loanedDateText);
-                        TextView returnDateView = listitemView.findViewById(R.id.returnDateText);
-                        ImageView bookImageView = listitemView.findViewById(R.id.imageView);
-                        bookNameView.setText(bookModel.getBook_name());
-                        loanedDateView.setText("Loaned at: " + bookLoanModel.getRequest_date());
-                        returnDateView.setText("Return before: " + bookLoanModel.getReturn_date());
 
-
-                        Picasso.get().load(bookModel.getImage()).into(bookImageView);
-                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                    } else {
-                        Log.d(TAG, "No such document");
-                    }
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
-
+        TextView loanedDateView = listitemView.findViewById(R.id.loanedDateText);
+        TextView returnDateView = listitemView.findViewById(R.id.returnDateText);
+        TextView statusView = listitemView.findViewById(R.id.statusText);
+        loanedDateView.setText("Loaned at: " + bookLoanModel.getRequest_date());
+        returnDateView.setText("Return before: " + bookLoanModel.getReturn_date());
+        statusView.setText("Status: " + bookLoanModel.getStatus());
+        TextView bookNameView = listitemView.findViewById(R.id.textView);
+        ImageView bookImageView = listitemView.findViewById(R.id.imageView);
+        bookNameView.setText(bookLoanModel.getBook_name());
+        Picasso.get().load(bookLoanModel.getImage()).into(bookImageView);
 
         listitemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Loading...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Loading completed", Toast.LENGTH_SHORT).show();
                 Context context = v.getContext();
                 Intent i = new Intent(context, UserBookLoanDetails.class);
                 i.putExtra("id", bookLoanModel.getId());
                 context.startActivity(i);
             }
         });
+
         return listitemView;
     }
 }

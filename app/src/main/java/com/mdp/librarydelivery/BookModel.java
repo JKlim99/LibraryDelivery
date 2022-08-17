@@ -8,18 +8,20 @@ public class BookModel {
     private String author;
     private String category;
     private String description;
+    private String status;
 
     public BookModel() {
 
     }
 
-    public BookModel(String book_name, String image, String ISBN, String author, String category, String description) {
+    public BookModel(String book_name, String image, String ISBN, String author, String category, String description, String status) {
         this.book_name = book_name;
         this.image = image;
         this.ISBN = ISBN;
         this.author = author;
         this.category = category;
         this.description = description;
+        this.status = status;
     }
 
     public String getId() {
@@ -68,6 +70,14 @@ public class BookModel {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getDescription() {

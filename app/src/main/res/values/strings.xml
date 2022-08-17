@@ -1,11 +1,24 @@
 <resources>
     <string name="app_name">LibraryDelivery</string>
     <string name="title_activity_user_home">UserHome</string>
-    <string name="nav_header_title">Welcome,</string>
+    <string name="nav_header_title">Welcome to Library Delivery</string>
     <string name="nav_header_subtitle">username</string>
     <string name="logout">Logout</string>
     <string name="book_list">Book List</string>
     <string name="loaned_books">Loaned Books</string>
     <string name="delivery">Delivery</string>
+    <string-array name="user_types">
+        <item>User</item>
+        <item>Deliverer</item>
+        <item>Admin</item>
+    </string-array>
+    <string name="title_activity_deliverer_home">DelivererHome</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

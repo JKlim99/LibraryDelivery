@@ -4,12 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1825" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_deliverer_delivery_details.xml" value="0.3632246376811594" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_deliverer_home.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_login.xml" value="0.3845350052246604" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_main.xml" value="0.286231884057971" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_manage_book_loans_rule.xml" value="0.19427083333333334" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_manage_books.xml" value="0.19427083333333334" />
-        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_book_details.xml" value="0.46368715083798884" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_book_details.xml" value="0.338" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_book_loan_details.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_booklist.xml" value="0.19427083333333334" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_delivery_details.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/activity_user_home.xml" value="0.1490036231884058" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/app_bar_user_book_details.xml" value="0.1490036231884058" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/app_bar_user_home.xml" value="0.1490036231884058" />
@@ -17,13 +22,17 @@
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/bookloan_items.xml" value="0.3458646616541353" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/content_user_book_details.xml" value="0.14" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/content_user_home.xml" value="0.1490036231884058" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/delivery_items.xml" value="0.371875" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/deliveryitemlist_items.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_booklist.xml" value="0.1490036231884058" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_delivery.xml" value="0.371875" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_gallery.xml" value="0.1490036231884058" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_home.xml" value="0.1490036231884058" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/fragment_loanedbooks.xml" value="0.1490036231884058" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/nav_header_user_book_details.xml" value="0.1490036231884058" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/layout/nav_header_user_home.xml" value="0.18085106382978725" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/menu/activity_user_book_details_drawer.xml" value="0.19166666666666668" />
+        <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/menu/home.xml" value="0.15648148148148147" />
         <entry key="..\:/AndroidStudioProjects/LibraryDelivery/app/src/main/res/menu/user_home.xml" value="0.19166666666666668" />
       </map>
     </option>

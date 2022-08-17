@@ -14,25 +14,46 @@
         android:theme="@style/Theme.LibraryDelivery"
         tools:targetApi="31">
         <activity
-            android:name=".UserBookLoanDetails"
-            android:label="Book loan details"
+            android:name=".DelivererDeliveryDetails"
             android:exported="false"
-            android:parentActivityName=".UserHome"/>
+            android:label="Delivery details"
+            android:parentActivityName=".DelivererHome" />
+        <activity
+            android:name=".DelivererHome"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false"
+            android:parentActivityName=".UserHome" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserDeliveryDetails"
+            android:exported="false"
+            android:label="Delivery details"
+            android:parentActivityName=".UserHome" />
+        <activity
+            android:name=".UserBookLoanDetails"
+            android:exported="false"
+            android:label="Book loan details"
+            android:parentActivityName=".UserHome" />
         <activity
             android:name=".UserBookDetails"
-            android:label="Book details"
             android:exported="false"
-            android:parentActivityName=".UserHome"/>
+            android:label="Book details"
+            android:parentActivityName=".UserHome" />
         <activity
             android:name=".UserHome"
             android:exported="true"
             android:label="@string/title_activity_user_home"
-            android:theme="@style/Theme.LibraryDelivery.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.LibraryDelivery.NoActionBar" />
         <activity
             android:name=".manage_book_loans_rule"
             android:exported="false" />
@@ -50,12 +71,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

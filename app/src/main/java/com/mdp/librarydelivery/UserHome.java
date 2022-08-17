@@ -1,8 +1,12 @@
 package com.mdp.librarydelivery;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -17,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.mdp.librarydelivery.databinding.ActivityUserHomeBinding;
 
 public class UserHome extends AppCompatActivity {
+    private static final String TAG = "";
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityUserHomeBinding binding;
@@ -59,5 +64,12 @@ public class UserHome extends AppCompatActivity {
 
     public void logout(MenuItem item) {
         Toast.makeText(this, "Logout successfully", Toast.LENGTH_SHORT).show();
+        Intent login = new Intent(UserHome.this, Login.class);
+        startActivity(login);
+    }
+
+    public void profile(MenuItem item) {
+        Intent profile = new Intent(UserHome.this, Profile.class);
+        startActivity(profile);
     }
 }
