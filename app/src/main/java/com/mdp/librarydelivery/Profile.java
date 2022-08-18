@@ -78,6 +78,7 @@ public class Profile extends AppCompatActivity {
 
         if(!passwordText.getText().toString().equals(confirmPasswordText.getText().toString())){
             warning.setVisibility(View.VISIBLE);
+            loading.setVisibility(View.INVISIBLE);
             return;
         }
 
@@ -87,11 +88,10 @@ public class Profile extends AppCompatActivity {
         docData.put("phone_number", phoneText.getText().toString());
         docData.put("address", addressText.getText().toString());
         docData.put("password", passwordText.getText().toString());
-        docData.put("user_type", "User");
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("users").document(session.getid())
-        .set(docData)
+        .update(docData)
         .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

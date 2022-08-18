@@ -112,7 +112,7 @@
                 android:text="ID: " />
 
             <RelativeLayout
-                android:layout_width="409dp"
+                android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:textAlignment="viewEnd"
                 tools:ignore="MissingConstraints"

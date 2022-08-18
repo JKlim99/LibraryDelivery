@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <RelativeLayout
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="120dp"
             android:textAlignment="viewEnd"
             tools:ignore="MissingConstraints"
@@ -45,7 +45,7 @@
 
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textAlignment="viewEnd"
             tools:ignore="MissingConstraints"
@@ -62,7 +62,7 @@
 
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textAlignment="viewEnd"
             tools:ignore="MissingConstraints"
@@ -79,7 +79,7 @@
 
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="409dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textAlignment="viewEnd"
             tools:ignore="MissingConstraints"

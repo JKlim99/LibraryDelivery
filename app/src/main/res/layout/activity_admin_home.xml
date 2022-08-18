@@ -7,7 +7,7 @@
     tools:context=".AdminHome">
 
     <LinearLayout
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="729dp"
         android:orientation="vertical"
         android:padding="10dp"
